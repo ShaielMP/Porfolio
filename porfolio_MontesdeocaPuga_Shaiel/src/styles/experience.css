@@ -102,8 +102,8 @@
 
 .timeline-dot {
   position: absolute;
-  left: -2rem;
-  top: 0;
+  left: -2.5rem;
+  top: 1rem;
   width: 20px;
   height: 20px;
   background: #3b82f6;

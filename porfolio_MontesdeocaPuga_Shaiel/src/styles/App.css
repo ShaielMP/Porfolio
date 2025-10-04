@@ -16,19 +16,19 @@ body {
   min-height: 100vh;
 }
 
-/* HERO SECTION */
 .hero {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   position: relative;
   background: linear-gradient(135deg, #0a1628 0%, #1e3a8a 100%);
 }
 
 .hero-content {
+  margin: 4rem 0 6rem 0;
   max-width: 1200px;
   width: 100%;
   display: grid;
@@ -110,37 +110,114 @@ body {
   color: #3b82f6;
 }
 
-/* SCROLL INDICATOR */
-.scroll-indicator {
+.tech-carousel {
+  margin-top: 2rem;
   position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+  background: rgba(10, 22, 40, 0.5);
+  backdrop-filter: blur(10px);
 }
 
-.scroll-circle {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: #3b82f6;
+.carousel-track {
+  display: flex;
+  gap: 3rem;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tech-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+  gap: 0.5rem;
+  min-width: 100px;
+  padding: 1rem;
+  background: rgba(30, 58, 138, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  transition: all 0.3s ease;
 }
 
-.scroll-circle:hover {
-  transform: translateY(5px);
+.tech-item:hover {
+  background: rgba(30, 58, 138, 0.5);
+  border-color: rgba(96, 165, 250, 0.4);
+  transform: translateY(-5px);
 }
 
-.scroll-circle span {
-  font-size: 0.9rem;
+.tech-item i {
+  font-size: 3rem;
+  color: #60a5fa;
+}
+
+.tech-item span {
+  font-size: 0.85rem;
   font-weight: 600;
-  color: #0a1628;
-  text-transform: uppercase;
+  color: #e2e8f0;
+  text-align: center;
+}
+
+/* Pausar animación al hover */
+.tech-carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+  .tech-carousel {
+    bottom: 2rem;
+  }
+  
+  .carousel-track {
+    gap: 2rem;
+    animation-duration: 25s;
+  }
+  
+  .tech-item {
+    min-width: 80px;
+    padding: 0.8rem;
+  }
+  
+  .tech-item i {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .tech-carousel {
+    bottom: 1rem;
+    padding: 1.5rem 0;
+  }
+  
+  .carousel-track {
+    gap: 1.5rem;
+    animation-duration: 20s;
+  }
+  
+  .tech-item {
+    min-width: 70px;
+    padding: 0.6rem;
+  }
+  
+  .tech-item i {
+    font-size: 2rem;
+  }
+  
+  .tech-item span {
+    font-size: 0.75rem;
+  }
 }
 
 /* PLACEHOLDER */
