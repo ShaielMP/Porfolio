@@ -1,8 +1,11 @@
 import "./styles/App.css";
 import "./styles/navbar.css";
 import "./styles/experience.css";
+import "./styles/projects.css";
 import { Navbar } from "./components/Navbar.jsx";
 import { Experience } from "./components/Experience.jsx";
+import { TechCarousel } from "./components/TechCarousel.jsx";
+import { Projects } from "./components/Projects.jsx";
 
 function App() {
   return (
@@ -46,107 +49,13 @@ function App() {
           </div>
         </div>
 
-        <div className="tech-carousel">
-          <div className="carousel-track">
-            <div className="tech-item">
-              <i className="devicon-html5-plain colored"></i>
-              <span>HTML5</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-css3-plain colored"></i>
-              <span>CSS3</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-javascript-plain colored"></i>
-              <span>JavaScript</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-react-original colored"></i>
-              <span>React</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-nodejs-plain colored"></i>
-              <span>Node.js</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-git-plain colored"></i>
-              <span>Git</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-github-original"></i>
-              <span>GitHub</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-mysql-plain colored"></i>
-              <span>MySQL</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-postgresql-plain colored"></i>
-              <span>PostgreSQL</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-php-plain colored"></i>
-              <span>PHP</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-java-plain colored"></i>
-              <span>Java</span>
-            </div>
-
-            <div className="tech-item">
-              <i className="devicon-html5-plain colored"></i>
-              <span>HTML5</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-css3-plain colored"></i>
-              <span>CSS3</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-javascript-plain colored"></i>
-              <span>JavaScript</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-react-original colored"></i>
-              <span>React</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-nodejs-plain colored"></i>
-              <span>Node.js</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-git-plain colored"></i>
-              <span>Git</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-github-original"></i>
-              <span>GitHub</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-mysql-plain colored"></i>
-              <span>MySQL</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-postgresql-plain colored"></i>
-              <span>PostgreSQL</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-php-plain colored"></i>
-              <span>PHP</span>
-            </div>
-            <div className="tech-item">
-              <i className="devicon-java-plain colored"></i>
-              <span>Java</span>
-            </div>
-          </div>
-        </div>
+        <TechCarousel />
+        
       </section>
 
       <Experience />
 
-      <section className="temp-section" id="proyectos">
-        <h2>Proyectos</h2>
-        <p>Esta sección se desarrollará próximamente...</p>
-      </section>
+      <Projects />
 
       <section className="temp-section" id="sobre-mi">
         <h2>Sobre mí</h2>
