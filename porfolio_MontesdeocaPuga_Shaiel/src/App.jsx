@@ -2,10 +2,12 @@ import "./styles/App.css";
 import "./styles/navbar.css";
 import "./styles/experience.css";
 import "./styles/projects.css";
+import "./styles/about.css";
 import { Navbar } from "./components/Navbar.jsx";
 import { Experience } from "./components/Experience.jsx";
 import { TechCarousel } from "./components/TechCarousel.jsx";
 import { Projects } from "./components/Projects.jsx";
+import { AboutMe } from "./components/AboutMe.jsx";
 
 function App() {
   return (
@@ -50,22 +52,26 @@ function App() {
         </div>
 
         <TechCarousel />
-        
       </section>
 
       <Experience />
 
       <Projects />
 
-      <section className="temp-section" id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>Esta sección se desarrollará próximamente...</p>
-      </section>
+      <AboutMe />
 
-      <section className="temp-section" id="contacto">
-        <h2>Contacto</h2>
-        <p>Esta sección se desarrollará próximamente...</p>
-      </section>
+      <footer className="footer">
+        <p>
+          &copy; 2025 Shaiel. Casi todos los derechos
+          reservados.
+        </p>
+        <div className="footer-info">
+          <a href="https://github.com/ShaielMP">
+            <i className="devicon-github-original"></i>
+          </a>
+          <a href="mailto:montesdeocapuga.shaiel@gmail.com">Contacto</a>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -80,7 +80,11 @@
   width: 100%;
 }
 
-.contact-btn {
+.navbar-menu li .contact-btn:hover::after {
+  width: 0%;
+}
+
+.navbar-menu > li > .contact-btn {
   background: #3b82f6;
   color: #0a1628;
   border: none;
@@ -92,7 +96,8 @@
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
-.contact-btn:hover {
+.navbar-menu > li > .contact-btn:hover {
+  color: #000000;
   background: #60a5fa;
   transform: translateY(-2px);
   box-shadow: 0 4px 25px rgba(59, 130, 246, 0.5);

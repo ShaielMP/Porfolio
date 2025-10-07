@@ -43,12 +43,7 @@ export function Navbar() {
             <a onClick={() => scrollToSection("sobre-mi")}>Sobre mí</a>
           </li>
           <li>
-            <button
-              className="contact-btn"
-              onClick={() => scrollToSection("contacto")}
-            >
-              Contacto
-            </button>
+            <a className="contact-btn" href="mailto:montesdeocapuga.shaiel@gmail.com">Contacto</a>
           </li>
         </ul>
 

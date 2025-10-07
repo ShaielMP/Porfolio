@@ -1,7 +1,7 @@
 .projects-section {
   min-height: 100vh;
   padding: 6rem 2rem;
-  background: #0a1628;
+  background: linear-gradient(180deg, #0f1f3a 0%, #0a1628 100%);
   position: relative;
 }
 
@@ -42,7 +42,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
 }
 
 .project-card {
