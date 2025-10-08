@@ -68,23 +68,104 @@ body {
 }
 
 .hero-info {
-  background: rgba(30, 58, 138, 0.3);
-  border-radius: 12px;
+  background: #e2e8f0;
+  rotate: 2deg;
   backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(96, 165, 250, 0.2);
 }
 
+.tape {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 130px;
+  height: 40px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 220, 0.5) 0%,
+    rgba(255, 255, 200, 0.4) 50%,
+    rgba(255, 255, 220, 0.5) 100%
+  );
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(200, 200, 180, 0.3);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.tape::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(255, 255, 255, 0.15) 3px,
+      rgba(255, 255, 255, 0.15) 6px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 0, 0, 0.02) 1px,
+      rgba(0, 0, 0, 0.02) 2px
+    );
+  opacity: 0.5;
+}
+
+.tape::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
 .hero-profile-pic {
-  width: 100%;
-  height: 100%;
+  padding: 1rem;
   object-fit: cover;
 }
 
 .hero-profile-pic img {
-  width: 100%;
-  height: 400px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 12px 12px 0 0;
+}
+
+.hero-info > .hero-contacts {
+  padding: 0 1rem 1rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hero-info > .hero-contacts i {
+  border-radius: 50px;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+.hero-info > .hero-contacts a {
+  width: 100px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 0.3rem;
+  font-size: 1rem;
+  color: #0a1628;
+}
+
+.hero-info > .hero-contacts a:hover {
+  color: #3b82f6;
 }
 
 .hero-intro {
@@ -169,13 +250,13 @@ body {
   text-align: center;
 }
 
-/* Pausar animación al hover */
 .tech-carousel:hover .carousel-track {
   animation-play-state: paused;
 }
 
 footer {
-  background: #0f1f3a;
+  padding-bottom: 2rem;
+  background: #0a1628;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -195,7 +276,6 @@ footer {
   font-size: 1.5rem;
 }
 
-/* RESPONSIVE */
 @media (max-width: 968px) {
   .tech-carousel {
     bottom: 2rem;
@@ -241,7 +321,6 @@ footer {
   }
 }
 
-/* PLACEHOLDER */
 .placeholder {
   min-height: 50vh;
   display: flex;

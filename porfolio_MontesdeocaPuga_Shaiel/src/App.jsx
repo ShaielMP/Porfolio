@@ -30,23 +30,21 @@ function App() {
           </div>
 
           <div className="hero-info">
+            <div className="tape"></div>
+            
             <div className="hero-profile-pic">
               <img
-                src="/images/shaiel.webp"
+                src="/images/shaiel.jpg"
                 alt="Shaiel Montesdeoca Puga profile picture"
               />
             </div>
 
-            <div className="social-links">
-              <p>
-                <strong>GitHub:</strong> @ShaielMP
-              </p>
-              <p>
-                <strong>LinkedIn:</strong> /Shaiel Montesdeoca Puga
-              </p>
-              <p>
-                <strong>Email:</strong> montesdeocapuga.shaiel@gmail.com
-              </p>
+            <div className="hero-contacts">
+              <a href="https://linkedin.com/in/">
+                <i className="devicon-linkedin-plain"></i>
+                LinkedIn
+              </a>
+              <a href="mailto:montesdeocapuga.shaiel@gmail.com">Contactame</a>
             </div>
           </div>
         </div>
