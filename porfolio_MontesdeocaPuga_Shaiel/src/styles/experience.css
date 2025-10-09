@@ -32,13 +32,15 @@
 }
 
 .experience-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 4rem;
 }
 
 .experience-column {
   position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .column-header {
@@ -120,24 +122,14 @@
 }
 
 .timeline-content {
-  background: rgba(30, 58, 138, 0.2);
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
   padding: 1.5rem;
   border-radius: 12px;
-  border: 1px solid rgba(96, 165, 250, 0.1);
   transition: all 0.3s ease;
   position: relative;
-}
-
-.timeline-content::before {
-  content: '';
-  position: absolute;
-  left: -12px;
-  top: 20px;
-  width: 0;
-  height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-right: 12px solid rgba(30, 58, 138, 0.2);
 }
 
 .timeline-item:hover .timeline-content {
@@ -148,12 +140,10 @@
 
 .timeline-year {
   display: inline-block;
-  background: #3b82f6;
-  color: #0a1628;
-  padding: 0.4rem 1rem;
+  color: #94a3b8;
   border-radius: 20px;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 0.8rem;
 }
 
@@ -166,10 +156,13 @@
 }
 
 .timeline-institution {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #60a5fa;
   font-weight: 600;
-  margin-bottom: 0.8rem;
+}
+
+.timeline-description-container {
+  max-width: fit-content;
 }
 
 .timeline-description {

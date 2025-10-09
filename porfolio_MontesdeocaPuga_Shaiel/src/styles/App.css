@@ -194,15 +194,27 @@ body {
 
 .tech-carousel {
   margin-top: 2rem;
-  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   padding: 2rem 0;
-  background: rgba(10, 22, 40, 0.5);
-  backdrop-filter: blur(10px);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
 }
+
 
 .carousel-track {
   display: flex;
